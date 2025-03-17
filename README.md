@@ -30,4 +30,20 @@ This simple elevator project written in Java will simulate using an elevator for
 To download the project, run:
 ```sh
 git clone https://github.com/enderzhangpro/Elevator.git
-cd Elevator
+cd Elevator```
+
+##~ Compiling and Running
+```sh
+mvn compile
+mvn test # optional if you want to make sure everything is working
+mvn package```
+Now you have two choices as to how you want to run the code:
+#### Option 1: Interactive Mode
+```sh
+java -cp target/elevator-simulator-1.0-SNAPSHOT.jar com.yourcompany.Elevator```
+#### Option 2: Command-Line Mode
+```sh
+java -cp target/elevator-simulator-1.0-SNAPSHOT.jar com.yourcompany.Elevator <starting_floor> <floor1,floor2,floor3,...>```
+Example:
+```sh
+java -cp target/elevator-simulator-1.0-SNAPSHOT.jar com.yourcompany.Elevator 12 2,9,1,32
