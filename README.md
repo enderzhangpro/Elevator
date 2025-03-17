@@ -18,7 +18,7 @@ This simple elevator project written in Java will simulate using an elevator for
 ## Unimplemented Features
 - No UI. Currently everything is just text.
 - No emergency button in case everything goes haywire.
-- Elevator music is still missing.
+- Elevator music is still missing. :musical_note::musical_note:
 
 ## Build Instructions
 ### Prerequisites
