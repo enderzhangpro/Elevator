@@ -1,6 +1,7 @@
 package com.yourcompany;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -145,7 +146,17 @@ public class Elevator {
 			int mostRecentFloor = 0;
 			while(true) {
 				System.out.print("Enter starting floor: ");
-				mostRecentFloor = scanner.nextInt(); // tracks the most recent floor input
+				// catch non-integer inputs instead of crashing
+				try {
+					// tracks the most recent floor input so we don't input the same floor twice
+					mostRecentFloor = scanner.nextInt();
+					scanner.nextLine(); // Consume the newline character
+				}
+				catch(InputMismatchException e) {
+					System.out.println("Only integers count as valid input.");
+					scanner.nextLine(); // Clear the invalid input
+					continue;
+				}
 				// create a loop if user inputs invalid starting floors so that we don't have to exit immediately
 				try {
 					simulator.setStartingFloor(mostRecentFloor);
@@ -159,7 +170,17 @@ public class Elevator {
 			// get as many floors to visit as the user wants
 			while(true) {
 				System.out.print("Enter next floor to visit (or a negative number to stop): ");
-				int nextFloor = scanner.nextInt();
+				int nextFloor = 0;
+				// catch non-integer inputs instead of crashing
+				try {
+					nextFloor = scanner.nextInt();
+					scanner.nextLine(); // Consume the newline character
+				}
+				catch(InputMismatchException e) {
+					System.out.println("Only integers count as valid input.");
+					scanner.nextLine(); // Clear the invalid input
+					continue;
+				}
 				if(nextFloor < 0) {
 					break;
 				}
