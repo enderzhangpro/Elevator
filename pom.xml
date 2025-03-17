@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.yourcompany</groupId>
+  <artifactId>elevator-simulator</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>elevator-simulator</name>
+  <url>http://maven.apache.org</url>
+
+  <!-- JUnit 5 Dependencies -->
+  <dependencies>
+    <!-- JUnit Jupiter API (used for writing tests) -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.7.1</version> <!-- You can change this to the latest version -->
+      <scope>test</scope>
+    </dependency>
+
+    <!-- JUnit Jupiter Engine (used for running tests) -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.7.1</version> <!-- Update to the latest version if needed -->
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- Build Configuration -->
+  <build>
+    <plugins>
+      <!-- Maven Compiler Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>8</release> <!-- Ensures compatibility with Java 8 -->
+        </configuration>
+      </plugin>
+
+      <!-- Maven Jar Plugin to Add Main-Class to Manifest -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Main-Class>com.yourcompany.Elevator</Main-Class> <!-- Replace with your main class -->
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
