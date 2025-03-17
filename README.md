@@ -32,7 +32,7 @@ To download the project, run:
 git clone https://github.com/enderzhangpro/Elevator.git
 cd Elevator
 ```
-##~ Compiling and Running
+### Compiling and Running
 ```sh
 mvn compile
 mvn test # optional if you want to make sure everything is working
