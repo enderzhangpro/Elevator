@@ -1,4 +1,4 @@
-# Internship Elevator Project
+# Elevator Project
 This simple elevator project written in Java will simulate using an elevator for you. It can be run both interactively or with command line arguments. While not requested in the instructions document, a top floor limit has been added because no building has infinite floors in real life. In addition, the elevator cannot go beneath floor zero.
 
 ## Features
