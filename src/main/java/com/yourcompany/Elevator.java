@@ -77,6 +77,15 @@ public class Elevator {
 		Elevator simulator = null;
 		int numFloorsToVisit = 0;
 		String usageMessage = "usage: java Elevator.java [num] [comma-separated list of nums]";
+
+		// Check for --help argument and print usage if present
+		for(String arg : args) {
+			if(arg.equals("--help") || arg.equals("-h")) {
+				System.out.println(usageMessage);
+				System.exit(0);
+			}
+		}
+		
 		// by caring about arguments, we can either run the program from command line or from user input
 		if(args.length > 1) {
 			int mostRecentFloor = 0;

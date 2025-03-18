@@ -50,3 +50,8 @@ java -cp target/elevator-simulator-1.0-SNAPSHOT.jar com.yourcompany.Elevator <st
 Example:
 ```sh
 java -cp target/elevator-simulator-1.0-SNAPSHOT.jar com.yourcompany.Elevator 12 2,9,1,32
+```
+#### Option 3: Optional Help Argument
+This will print the usage message for you.
+```sh
+java -cp target/elevator-simulator-1.0-SNAPSHOT.jar com.yourcompany.Elevator --help
