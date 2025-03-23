@@ -171,7 +171,7 @@ public class Elevator {
 					simulator.setStartingFloor(mostRecentFloor);
 				}
 				catch(FloorOutOfBoundsException e) {
-					System.out.println("Floor " + nextFloor + " is out of bounds. Must be between (0 and " + TOP_FLOOR + ")");
+					System.out.println("Floor " + mostRecentFloor + " is out of bounds. Must be between (0 and " + TOP_FLOOR + ")");
 					continue;
 				}
 				break;
