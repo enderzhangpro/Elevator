@@ -171,7 +171,7 @@ public class Elevator {
 					simulator.setStartingFloor(mostRecentFloor);
 				}
 				catch(FloorOutOfBoundsException e) {
-					System.out.println("That floor is out of bounds.");
+					System.out.println("Floor " + nextFloor + " is out of bounds. Must be between (0 and " + TOP_FLOOR + ")");
 					continue;
 				}
 				break;
@@ -203,7 +203,7 @@ public class Elevator {
 						simulator.addFloor(nextFloor);
 					}
 					catch(FloorOutOfBoundsException e) {
-						System.out.println("That floor is out of bounds!");
+						System.out.println("Floor " + nextFloor + " is out of bounds. Must be between (0 and " + TOP_FLOOR + ")");
 						continue;
 					}
 					mostRecentFloor = nextFloor;
